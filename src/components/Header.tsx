@@ -20,11 +20,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, setDark }) => {
     <header
       id="header"
       className={`header w-full z-50 sticky top-0 flex items-center justify-between py-5 md:py-2 ${
-        scrollCount > 100
-          ? !isDark
-            ? "!bg-white shadow-md"
-            : "dark:bg-slate-900 shadow-md"
-          : "bg-opacity-50 bg-slate-50"
+        scrollCount > 100 ? "!bg-white shadow-md" : "bg-opacity-50 bg-slate-50"
       }`}
     >
       <div className="container mx-auto flex flex-col md:flex-row">
@@ -60,7 +56,7 @@ const Header: React.FC<HeaderProps> = ({ isDark, setDark }) => {
         </button> */}
 
         <h1 className="w-full md:w-1/4 flex items-center justify-center md:justify-start">
-          <a href="/" className="uppercase text-3xl dark:text-white">
+          <a href="/" className="uppercase text-3xl">
             <span className="font-bold">Arif</span> Khan
           </a>
         </h1>

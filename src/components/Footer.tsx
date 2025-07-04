@@ -2,7 +2,7 @@ import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   return (
-    <footer className="footer py-10 bg-slate-100 bg-opacity-50 dark:bg-slate-700">
+    <footer className="footer py-10 bg-slate-100 bg-opacity-50">
       <div className="container m-auto">
         <nav className="footer-nav flex flex-wrap justify-center">
           <a
@@ -30,12 +30,12 @@ const Footer = () => {
 
         <SocialLinks />
 
-        <p className="mt-5 text-base leading-6 text-center text-gray-500 dark:text-slate-300">
+        <p className="mt-5 text-base leading-6 text-center text-gray-500">
           &copy; {new Date().getFullYear()}{" "}
           <span className="font-medium">Arif Khan</span>. Made with ❤️
         </p>
         <div className="flex flex-col justify-center text-center mt-3">
-          <div className="text-gray-500 dark:text-slate-300">
+          <div className="text-gray-500">
             Image Credit:{" "}
             <a
               href="https://www.pexels.com/"
@@ -47,12 +47,12 @@ const Footer = () => {
               Pexels
             </a>
           </div>
-          <div className="text-gray-500 dark:text-slate-300">
+          <div className="text-gray-500">
             Last updated on: <span className="font-medium">2025-07-04</span>
           </div>
         </div>
         <div className="flex justify-center items-center gap-1 mt-2">
-          <span className="text-gray-500 dark:text-slate-300">Tech used:</span>
+          <span className="text-gray-500">Tech used:</span>
           <div className="flex gap-2">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"

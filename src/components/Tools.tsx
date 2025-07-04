@@ -4,7 +4,7 @@ const Tools = () => {
   return (
     <section
       id="tools"
-      className="tools py-10 md:py-16 bg-slate-100 bg-opacity-50 scroll-mt-12 dark:bg-slate-700"
+      className="tools py-10 md:py-16 bg-slate-100 bg-opacity-50 scroll-mt-12"
     >
       <div className="sec-container md:flex-row">
         <div className="w-full md:w-1/2">

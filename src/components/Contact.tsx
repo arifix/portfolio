@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="contact py-10 md:py-16 bg-slate-200 bg-opacity-50 scroll-mt-12 dark:bg-gradient-to-r dark:from-slate-700 dark:via-slate-900 dark:to-slate-950"
+      className="contact py-10 md:py-16 bg-slate-200 bg-opacity-50 scroll-mt-12"
     >
       <div className="sec-container">
         <div className="w-full md:w-1/2">
@@ -28,7 +28,11 @@ const Contact = () => {
             <div>
               <span>Portfolio</span>
               <h4>
-                <a href="https://www.madebyarif.com" target="_blank" className="py-2 border-b border-transparent hover:border-gray-600 dark:hover:border-white">
+                <a
+                  href="https://www.madebyarif.com"
+                  target="_blank"
+                  className="py-2 border-b border-transparent hover:border-gray-600"
+                >
                   www.madebyarif.com
                 </a>
               </h4>

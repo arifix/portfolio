@@ -6,7 +6,7 @@ const Works = () => {
   return (
     <section
       id="works"
-      className="works py-10 md:py-20 bg-slate-200 bg-opacity-50 scroll-mt-12 dark:bg-gradient-to-r dark:from-slate-700 dark:via-slate-900 dark:to-slate-950"
+      className="works py-10 md:py-20 bg-slate-200 bg-opacity-50 scroll-mt-12"
     >
       <div className="container mx-auto mb-10 px-5 md:px-0">
         <SecHeadings
