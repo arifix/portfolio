@@ -1,5 +1,5 @@
 import { RoughNotation } from "react-rough-notation";
-import arif from "../assets/arif.png";
+import arif from "../assets/arif_new.png";
 
 const Hero = () => {
   return (

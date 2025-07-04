@@ -1,12 +1,42 @@
 {
   "works": [
     {
+      "image": "https://cdn.shopify.com/app-store/listing_images/cef19ef64f6f5be98062a389eee22da7/desktop_screenshot/CPKj1NnFi4gDEAE=.jpeg?height=1800&quality=90&width=3200",
+      "title": "GridMaster Theme Sections",
+      "description": "GridMaster Theme Sections has a number of app blocks that you can use to make beautiful layouts in Online Store 2.0 themes. The following blocks are available in the app: Blog Grid, Chart, Feature, Image Gallery, Pricing, Product Grid, Steps, Team, Testimonial, Timeline and more will be added in future. The app doesn't leave any code behind or change the liquid code for your theme. After you install the app, you can use the app blocks in the Shopify Theme Editor.",
+      "type": "Shopify App Store",
+      "category": "Shopify App",
+      "used_tech": "Shopify, RemixJS, ReactJS, TailwindCSS",
+      "demo_url": "https://apps.shopify.com/gridmaster-theme-sections",
+      "source_url": ""
+    },
+    {
+      "image": "https://cdn.shopify.com/app-store/listing_images/da9d8ff8cfe218379cf2a68db54cff3a/desktop_screenshot/CKD_0qbSxocDEAE=.jpeg?height=1800&quality=90&width=3200",
+      "title": "Futurize - Easy Coming Soon",
+      "description": "Futurize - Easy Coming Soon, allows you to create stunning coming soon pages with ease. Choose from a variety of ready-made templates and customize taglines, headings, descriptions, countdown timers, subscription forms, and social media icons. Enjoy extensive customization options to make your page unique and engaging, all with just a few clicks. You can choose from a wide range of fonts in the Google font. Besides font selection, you also have the ability to customize various text properties.",
+      "type": "Shopify App Store",
+      "category": "Shopify App",
+      "used_tech": "Shopify, RemixJS, ReactJS, TailwindCSS",
+      "demo_url": "https://apps.shopify.com/futurize-easy-coming-soon",
+      "source_url": ""
+    },
+    {
+      "image": "https://ps.w.org/awesome-posts/assets/banner-772x250.png",
+      "title": "Awesome Posts",
+      "description": "The Awesome Posts plugin allows you to manage various post shortcodes effortlessly. You can conveniently adjust the format, query, filters, layouts, and styles through an intuitive editor. This adaptable plugin is compatible with both standard posts and custom posts.",
+      "type": "Open Source",
+      "category": "WordPress Plugin",
+      "used_tech": "PHP, WordPress, ReactJS, TailwindCSS",
+      "demo_url": "https://wordpress.org/plugins/awesome-posts/",
+      "source_url": "https://github.com/arifix/awesome-posts"
+    },
+    {
       "image": "https://static.showit.co/1200/W-OaQYXOQjW0KFjYBdZhMQ/160719/gray_and_black_bold_minimalist_how_to_youtube_thumbnail.jpg",
       "title": "Showit Blog Stylist Plugin",
       "description": "Transform the look of your Showit blog with the click of your mouse. This Showit plugin was created for creatives using Showit who want a better looking blog. Showit is amazing, but the blog styles are limited… until now! Changing the style of your blog headings has never been easier. Use custom fonts, update the font size, and set custom spacing on your blog.. plus way more!",
       "type": "Client's Work",
       "category": "WordPress Plugin",
-      "used_tech": "PHP, WordPress",
+      "used_tech": "PHP, WordPress, ReactJS, TailwindCSS",
       "demo_url": "https://riseplugins.com/",
       "source_url": ""
     },
@@ -17,28 +47,8 @@
       "type": "Open Source",
       "category": "WordPress Plugin",
       "used_tech": "PHP, WordPress, ReactJS",
-      "demo_url": "https://github.com/arifix/gutpress",
+      "demo_url": "https://github.com/arifix/gutpress/releases/tag/gutpress",
       "source_url": "https://github.com/arifix/gutpress"
-    },
-    {
-      "image": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "title": "Google PageSpeed Checker (Chrome Extension)",
-      "description": "A chrome extension to check Google PageSpeed of the website from browser tab.",
-      "type": "Open Source",
-      "category": "Browser Extension",
-      "used_tech": "JavaScript",
-      "demo_url": "https://github.com/arifix/google-pagespeed-checker",
-      "source_url": "https://github.com/arifix/google-pagespeed-checker"
-    },
-    {
-      "image": "https://quizix.madebyarif.com/codecanyon/images/thumbs_590_300.png",
-      "title": "Quizix - Android Quiz App with AdMob, FCM Push Notification, Offline Data Caching",
-      "description": "Quizix is an android quiz app with single text/photo question with two/three/four answer options. Simply add your category/sub-category/question from backend and all remaining tasks will be done by app. The application is fully native, using latest features of Android platform to provide the best user experience.",
-      "type": "Marketplace Product",
-      "category": "Android APP",
-      "used_tech": "JAVA, Android, XML, PHP, MySQL, Laravel",
-      "demo_url": "https://codecanyon.net/item/quizix-android-quiz-app-with-admob-fcm-push-notification-offline-data-caching/21213145",
-      "source_url": ""
     }
   ]
 }
