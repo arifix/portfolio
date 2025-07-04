@@ -6,7 +6,7 @@
       "description": "GridMaster Theme Sections has a number of app blocks that you can use to make beautiful layouts in Online Store 2.0 themes. The following blocks are available in the app: Blog Grid, Chart, Feature, Image Gallery, Pricing, Product Grid, Steps, Team, Testimonial, Timeline and more will be added in future. The app doesn't leave any code behind or change the liquid code for your theme. After you install the app, you can use the app blocks in the Shopify Theme Editor.",
       "type": "Shopify App Store",
       "category": "Shopify App",
-      "used_tech": "Shopify, RemixJS, ReactJS, TailwindCSS",
+      "used_tech": "Shopify, RemixJS, ReactJS",
       "demo_url": "https://apps.shopify.com/gridmaster-theme-sections",
       "source_url": ""
     },
@@ -16,7 +16,7 @@
       "description": "Futurize - Easy Coming Soon, allows you to create stunning coming soon pages with ease. Choose from a variety of ready-made templates and customize taglines, headings, descriptions, countdown timers, subscription forms, and social media icons. Enjoy extensive customization options to make your page unique and engaging, all with just a few clicks. You can choose from a wide range of fonts in the Google font. Besides font selection, you also have the ability to customize various text properties.",
       "type": "Shopify App Store",
       "category": "Shopify App",
-      "used_tech": "Shopify, RemixJS, ReactJS, TailwindCSS",
+      "used_tech": "Shopify, RemixJS, ReactJS",
       "demo_url": "https://apps.shopify.com/futurize-easy-coming-soon",
       "source_url": ""
     },

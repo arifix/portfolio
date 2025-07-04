@@ -67,7 +67,7 @@ html {
   }
 
   .section-tagline {
-    @apply text-gray-700 text-3xl font-medium;
+    @apply text-gray-700 text-2xl md:text-3xl font-medium;
   }
 
   .contact .contact-item span {
