@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({
     >
       <ul>
         <li>
-          <a href="#header" onClick={() => setIsMenuOpen(false)}>
+          <a href="#hero" onClick={() => setIsMenuOpen(false)}>
             Home
           </a>
         </li>

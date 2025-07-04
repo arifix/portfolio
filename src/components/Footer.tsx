@@ -69,6 +69,13 @@ const Footer = () => {
               title="ReactJS"
             />
             <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+              width={30}
+              height={30}
+              title="TypeScript"
+            />
+            <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
               alt="TailwindCSS"
               width={30}

@@ -1,6 +1,6 @@
 const SocialLinks = () => {
   return (
-    <div className="social-links flex gap-2 items-center justify-center my-2">
+    <div className="social-links flex gap-4 items-center justify-center my-2">
       <a
         href="https://www.facebook.com/arifix/"
         target="_blank"

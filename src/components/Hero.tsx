@@ -171,6 +171,13 @@ const Hero = () => {
               title="ReactJS"
             />
             <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+              width={42}
+              height={42}
+              title="TypeScript"
+            />
+            <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
               alt="NextJS"
               width={42}

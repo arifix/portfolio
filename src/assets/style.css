@@ -39,7 +39,7 @@ html {
   }
 
   .tech-stacks {
-    @apply flex justify-start gap-4 lg:w-2/3 flex-wrap;
+    @apply flex justify-start gap-4 flex-wrap;
   }
 
   .tech-stacks img {
