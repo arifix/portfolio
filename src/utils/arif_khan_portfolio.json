@@ -1,0 +1,44 @@
+{
+  "works": [
+    {
+      "image": "https://static.showit.co/1200/W-OaQYXOQjW0KFjYBdZhMQ/160719/gray_and_black_bold_minimalist_how_to_youtube_thumbnail.jpg",
+      "title": "Showit Blog Stylist Plugin",
+      "description": "Transform the look of your Showit blog with the click of your mouse. This Showit plugin was created for creatives using Showit who want a better looking blog. Showit is amazing, but the blog styles are limited… until now! Changing the style of your blog headings has never been easier. Use custom fonts, update the font size, and set custom spacing on your blog.. plus way more!",
+      "type": "Client's Work",
+      "category": "WordPress Plugin",
+      "used_tech": "PHP, WordPress",
+      "demo_url": "https://riseplugins.com/",
+      "source_url": ""
+    },
+    {
+      "image": "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Gutpress",
+      "description": "Custom Gutenburg blocks plugin to add custom functionalities to your WordPress site.",
+      "type": "Open Source",
+      "category": "WordPress Plugin",
+      "used_tech": "PHP, WordPress, ReactJS",
+      "demo_url": "https://github.com/arifix/gutpress",
+      "source_url": "https://github.com/arifix/gutpress"
+    },
+    {
+      "image": "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "title": "Google PageSpeed Checker (Chrome Extension)",
+      "description": "A chrome extension to check Google PageSpeed of the website from browser tab.",
+      "type": "Open Source",
+      "category": "Browser Extension",
+      "used_tech": "JavaScript",
+      "demo_url": "https://github.com/arifix/google-pagespeed-checker",
+      "source_url": "https://github.com/arifix/google-pagespeed-checker"
+    },
+    {
+      "image": "https://quizix.madebyarif.com/codecanyon/images/thumbs_590_300.png",
+      "title": "Quizix - Android Quiz App with AdMob, FCM Push Notification, Offline Data Caching",
+      "description": "Quizix is an android quiz app with single text/photo question with two/three/four answer options. Simply add your category/sub-category/question from backend and all remaining tasks will be done by app. The application is fully native, using latest features of Android platform to provide the best user experience.",
+      "type": "Marketplace Product",
+      "category": "Android APP",
+      "used_tech": "JAVA, Android, XML, PHP, MySQL, Laravel",
+      "demo_url": "https://codecanyon.net/item/quizix-android-quiz-app-with-admob-fcm-push-notification-offline-data-caching/21213145",
+      "source_url": ""
+    }
+  ]
+}

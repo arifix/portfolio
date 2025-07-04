@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  body {
+    font-family: "Outfit", sans-serif;
+  }
+
+  .arif-img {
+    @apply relative w-72 md:w-96 mx-auto border-gray-400 border-4 transform -scale-x-100 rotate-6;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+
+  .graphic-img {
+    @apply max-w-full w-[400px] md:w-[600px] mx-auto;
+  }
+
+  .sec-container {
+    @apply container m-auto md:m-auto px-4 flex flex-col md:flex-row items-center gap-0 md:gap-10;
+  }
+
+  .primary-title {
+    @apply text-gray-600 text-2xl md:text-4xl dark:text-white;
+  }
+
+  .secondary-title {
+    @apply text-xl text-gray-600 dark:text-white;
+  }
+
+  .social-links a img {
+    @apply w-6 grayscale hover:grayscale-0;
+  }
+
+  .tech-stacks {
+    @apply flex justify-start gap-4 lg:w-2/3 flex-wrap;
+  }
+
+  .tech-stacks img {
+    @apply h-8 w-auto;
+  }
+
+  header nav ul {
+    @apply md:flex md:items-center md:justify-end float-none md:float-right flex-wrap mt-2 md:mt-0;
+  }
+
+  header nav li {
+    @apply duration-200 cursor-pointer;
+  }
+
+  header nav li a {
+    @apply dark:text-white block p-3 md:p-4 md:border-b border-transparent hover:border-gray-600;
+  }
+
+  header svg {
+    @apply w-7 h-7 md:w-5 md:h-5 dark:text-white hover:fill-gray-500;
+  }
+
+  .section-title {
+    @apply text-gray-800 uppercase text-lg font-bold dark:text-slate-300;
+  }
+
+  .section-tagline {
+    @apply text-gray-700 text-3xl font-medium dark:text-white;
+  }
+
+  .contact .contact-item span {
+    @apply text-gray-500 dark:text-slate-300;
+  }
+
+  .contact .contact-item h4 {
+    @apply text-lg dark:text-white;
+  }
+
+  footer .footer-nav a {
+    @apply px-5 py-2 text-base text-gray-500 hover:text-gray-900 dark:text-slate-300 dark:hover:text-white;
+  }
+
+  .single-work {
+    @apply container px-5 md:px-0 mx-auto mb-10 dark:text-slate-200;
+  }
+
+  .single-work > div {
+    @apply p-5 bg-white flex flex-col md:flex-row gap-10 items-center rounded-lg shadow-md dark:bg-slate-600;
+  }
+
+  .single-work img {
+    @apply w-full p-2 rounded-tl-2xl rounded-br-2xl;
+  }
+
+  .single-work h3 {
+    @apply text-2xl font-bold text-gray-600 mb-2 dark:text-white;
+  }
+
+  .single-work a {
+    @apply mt-3 text-gray-600 font-semibold border-b border-transparent hover:border-gray-600 p-2 inline-flex items-center dark:text-slate-200 dark:hover:text-white;
+  }
+
+  .single-work .used-tech {
+    @apply inline-block mr-2;
+  }
+
+  .single-work .used-tech > div {
+    @apply flex pr-2 h-full items-center;
+  }
+
+  .single-work .used-tech svg {
+    @apply text-gray-600 w-6 h-6 mr-1 dark:text-gray-500;
+  }
+
+  .single-work .used-tech p {
+    @apply font-medium dark:text-slate-200;
+  }
+
+  .single-work .work-type h4 {
+    @apply text-gray-500 font-normal dark:text-slate-200;
+  }
+
+  .single-work .work-type p {
+    @apply dark:text-white;
+  }
+
+  .tools .timeline {
+    @apply absolute h-full border opacity-5;
+  }
+
+  .single-skill {
+    @apply flex items-center w-full;
+  }
+
+  .single-skill .progress {
+    @apply w-4 h-4 bg-gray-600 rounded-full -ml-2;
+  }
+
+  .single-skill span {
+    @apply text-lg text-gray-500 dark:text-slate-400;
+  }
+
+  .single-skill p {
+    @apply text-lg text-gray-900 dark:text-white;
+  }
+}
