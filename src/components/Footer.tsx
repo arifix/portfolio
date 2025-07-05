@@ -48,19 +48,12 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-gray-500">
-            Last updated on: <span className="font-medium">2025-07-04</span>
+            Last updated on: <span className="font-medium">2025-07-05</span>
           </div>
         </div>
         <div className="flex justify-center items-center gap-1 mt-2">
           <span className="text-gray-500">Tech used:</span>
           <div className="flex gap-2">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
-              alt="NextJS"
-              width={30}
-              height={30}
-              title="NextJS"
-            />
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
               alt="ReactJS"
