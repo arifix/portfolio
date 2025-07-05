@@ -9,7 +9,7 @@ const Contact = () => {
     >
       <div className="sec-container">
         <div className="w-full md:w-1/2">
-          <img src={contact} alt="Contact" className="p-10 -scale-75" />
+          <img src={contact} alt="Contact" className="p-10 -scale-75 mix-blend-multiply" />
         </div>
         <div className="w-full md:w-1/2">
           <SecHeadings
