@@ -1,54 +1,117 @@
 {
-  "works": [
+  "projects": [
     {
-      "image": "https://cdn.shopify.com/app-store/listing_images/cef19ef64f6f5be98062a389eee22da7/desktop_screenshot/CPKj1NnFi4gDEAE=.jpeg?height=1800&quality=90&width=3200",
+      "id": 1,
+      "slug": "gridmaster-theme-sections",
       "title": "GridMaster Theme Sections",
-      "description": "GridMaster Theme Sections has a number of app blocks that you can use to make beautiful layouts in Online Store 2.0 themes. The following blocks are available in the app: Blog Grid, Chart, Feature, Image Gallery, Pricing, Product Grid, Steps, Team, Testimonial, Timeline and more will be added in future. The app doesn't leave any code behind or change the liquid code for your theme. After you install the app, you can use the app blocks in the Shopify Theme Editor.",
-      "type": "Shopify App Store",
+      "tagline": "Custom layout blocks for Shopify Online Store 2.0 themes",
+      "description": "GridMaster adds powerful app blocks to Shopify OS 2.0 themes — Blog Grid, Chart, Feature, Image Gallery, Pricing, Product Grid, Steps, Team, Testimonial, and Timeline. Zero code injection: no Liquid changes, no leftover code after uninstalling.",
+      "image": "https://cdn.shopify.com/app-store/listing_images/cef19ef64f6f5be98062a389eee22da7/desktop_screenshot/CPKj1NnFi4gDEAE=.jpeg?height=900&quality=90&width=1600",
       "category": "Shopify App",
-      "used_tech": "Shopify, RemixJS, ReactJS",
+      "type": "Shopify App Store",
+      "tech_stack": ["Shopify", "Remix", "React", "Polaris"],
+      "year": "2024",
+      "status": "live",
       "demo_url": "https://apps.shopify.com/gridmaster-theme-sections",
-      "source_url": ""
+      "source_url": "",
+      "highlights": [
+        "Zero code injection into theme",
+        "11+ layout app blocks",
+        "Listed on Shopify App Store"
+      ],
+      "code_snippet": null
     },
     {
-      "image": "https://cdn.shopify.com/app-store/listing_images/da9d8ff8cfe218379cf2a68db54cff3a/desktop_screenshot/CKD_0qbSxocDEAE=.jpeg?height=1800&quality=90&width=3200",
-      "title": "Futurize - Easy Coming Soon",
-      "description": "Futurize - Easy Coming Soon, allows you to create stunning coming soon pages with ease. Choose from a variety of ready-made templates and customize taglines, headings, descriptions, countdown timers, subscription forms, and social media icons. Enjoy extensive customization options to make your page unique and engaging, all with just a few clicks. You can choose from a wide range of fonts in the Google font. Besides font selection, you also have the ability to customize various text properties.",
-      "type": "Shopify App Store",
+      "id": 2,
+      "slug": "futurize-easy-coming-soon",
+      "title": "Futurize — Easy Coming Soon",
+      "tagline": "Stunning coming soon pages for Shopify stores",
+      "description": "Futurize lets merchants create polished coming soon pages without touching code. Choose from pre-built templates, customize headings, countdowns, subscription forms, social icons, and typography — all from a visual editor.",
+      "image": "https://cdn.shopify.com/app-store/listing_images/da9d8ff8cfe218379cf2a68db54cff3a/desktop_screenshot/CKD_0qbSxocDEAE=.jpeg?height=900&quality=90&width=1600",
       "category": "Shopify App",
-      "used_tech": "Shopify, RemixJS, ReactJS",
+      "type": "Shopify App Store",
+      "tech_stack": ["Shopify", "Remix", "React", "Polaris"],
+      "year": "2024",
+      "status": "live",
       "demo_url": "https://apps.shopify.com/futurize-easy-coming-soon",
-      "source_url": ""
+      "source_url": "",
+      "highlights": [
+        "Pre-built templates ready to launch",
+        "Countdown, forms & social icons",
+        "Google Fonts integration"
+      ],
+      "code_snippet": null
     },
     {
-      "image": "https://ps.w.org/awesome-posts/assets/banner-772x250.png",
+      "id": 3,
+      "slug": "awesome-posts",
       "title": "Awesome Posts",
-      "description": "The Awesome Posts plugin allows you to manage various post shortcodes effortlessly. You can conveniently adjust the format, query, filters, layouts, and styles through an intuitive editor. This adaptable plugin is compatible with both standard posts and custom posts.",
-      "type": "Open Source",
+      "tagline": "Flexible post shortcode manager for WordPress",
+      "description": "Awesome Posts is a WordPress plugin that lets you render any post query as a custom shortcode. Adjust layout, format, query filters, and styles through an intuitive visual editor. Compatible with standard and custom post types.",
+      "image": "https://ps.w.org/awesome-posts/assets/banner-772x250.png",
       "category": "WordPress Plugin",
-      "used_tech": "PHP, WordPress, ReactJS, TailwindCSS",
+      "type": "Open Source",
+      "tech_stack": ["PHP", "WordPress", "React", "TailwindCSS"],
+      "year": "2023",
+      "status": "live",
       "demo_url": "https://wordpress.org/plugins/awesome-posts/",
-      "source_url": "https://github.com/arifix/awesome-posts"
+      "source_url": "https://github.com/arifix/awesome-posts",
+      "highlights": [
+        "Listed on WordPress.org Plugin Directory",
+        "Works with custom post types",
+        "Visual shortcode editor"
+      ],
+      "code_snippet": {
+        "filename": "awesome-posts.php",
+        "language": "php",
+        "code": "<?php\n/**\n * Render posts grid via [awesome-posts] shortcode.\n *\n * @param array $atts Shortcode attributes.\n * @return string     Rendered HTML output.\n */\nfunction awesome_posts_render( array $atts ): string {\n    $atts = shortcode_atts( [\n        'layout'   => 'grid',\n        'columns'  => 3,\n        'limit'    => 6,\n        'category' => '',\n        'orderby'  => 'date',\n    ], $atts, 'awesome-posts' );\n\n    $query = new WP_Query( [\n        'posts_per_page' => (int) $atts['limit'],\n        'cat'            => sanitize_text_field( $atts['category'] ),\n        'orderby'        => sanitize_key( $atts['orderby'] ),\n        'order'          => 'DESC',\n    ] );\n\n    ob_start();\n    if ( $query->have_posts() ) {\n        printf(\n            '<div class=\"ap-grid ap-cols-%s\">',\n            esc_attr( $atts['columns'] )\n        );\n        while ( $query->have_posts() ) {\n            $query->the_post();\n            get_template_part( 'template-parts/ap-post', $atts['layout'] );\n        }\n        echo '</div>';\n    }\n    wp_reset_postdata();\n\n    return ob_get_clean();\n}\nadd_shortcode( 'awesome-posts', 'awesome_posts_render' );"
+      }
     },
     {
-      "image": "https://static.showit.co/1200/W-OaQYXOQjW0KFjYBdZhMQ/160719/gray_and_black_bold_minimalist_how_to_youtube_thumbnail.jpg",
+      "id": 4,
+      "slug": "showit-blog-stylist",
       "title": "Showit Blog Stylist Plugin",
-      "description": "Transform the look of your Showit blog with the click of your mouse. This Showit plugin was created for creatives using Showit who want a better looking blog. Showit is amazing, but the blog styles are limited… until now! Changing the style of your blog headings has never been easier. Use custom fonts, update the font size, and set custom spacing on your blog.. plus way more!",
-      "type": "Client's Work",
+      "tagline": "Custom typography and styling for Showit blogs",
+      "description": "The Showit Blog Stylist plugin transforms the visual presentation of Showit blogs. Change heading fonts, sizes, spacing, and colors without editing CSS — all from a settings panel built specifically for Showit's WordPress blog layer.",
+      "image": "https://static.showit.co/1200/W-OaQYXOQjW0KFjYBdZhMQ/160719/gray_and_black_bold_minimalist_how_to_youtube_thumbnail.jpg",
       "category": "WordPress Plugin",
-      "used_tech": "PHP, WordPress, ReactJS, TailwindCSS",
+      "type": "Client Project",
+      "tech_stack": ["PHP", "WordPress", "React", "TailwindCSS"],
+      "year": "2023",
+      "status": "live",
       "demo_url": "https://riseplugins.com/",
-      "source_url": ""
+      "source_url": "",
+      "highlights": [
+        "Built for Showit platform users",
+        "No CSS knowledge required",
+        "Custom font & spacing controls"
+      ],
+      "code_snippet": null
     },
     {
-      "image": "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 5,
+      "slug": "gutpress",
       "title": "Gutpress",
-      "description": "Custom Gutenburg blocks plugin to add custom functionalities to your WordPress site.",
-      "type": "Open Source",
+      "tagline": "Custom Gutenberg blocks for WordPress",
+      "description": "Gutpress is an open-source collection of custom Gutenberg blocks that extend WordPress with reusable, content-focused UI patterns — built with React and the @wordpress/blocks API.",
+      "image": "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "category": "WordPress Plugin",
-      "used_tech": "PHP, WordPress, ReactJS",
+      "type": "Open Source",
+      "tech_stack": ["PHP", "WordPress", "React"],
+      "year": "2022",
+      "status": "archived",
       "demo_url": "https://github.com/arifix/gutpress/releases/tag/gutpress",
-      "source_url": "https://github.com/arifix/gutpress"
+      "source_url": "https://github.com/arifix/gutpress",
+      "highlights": [
+        "Built on @wordpress/blocks API",
+        "Reusable content block patterns",
+        "Open source on GitHub"
+      ],
+      "code_snippet": {
+        "filename": "heading-block/index.js",
+        "language": "jsx",
+        "code": "import { registerBlockType } from '@wordpress/blocks';\nimport { useBlockProps, RichText } from '@wordpress/block-editor';\nimport metadata from './block.json';\n\nregisterBlockType( metadata.name, {\n    edit( { attributes, setAttributes } ) {\n        const blockProps = useBlockProps();\n        return (\n            <div { ...blockProps }>\n                <RichText\n                    tagName=\"h2\"\n                    value={ attributes.heading }\n                    onChange={ ( val ) =>\n                        setAttributes({ heading: val })\n                    }\n                    placeholder=\"Enter heading…\"\n                />\n                <RichText\n                    tagName=\"p\"\n                    value={ attributes.content }\n                    onChange={ ( val ) =>\n                        setAttributes({ content: val })\n                    }\n                    placeholder=\"Enter content…\"\n                />\n            </div>\n        );\n    },\n    save( { attributes } ) {\n        const blockProps = useBlockProps.save();\n        return (\n            <div { ...blockProps }>\n                <RichText.Content\n                    tagName=\"h2\"\n                    value={ attributes.heading }\n                />\n                <RichText.Content\n                    tagName=\"p\"\n                    value={ attributes.content }\n                />\n            </div>\n        );\n    },\n} );"
+      }
     }
   ]
 }

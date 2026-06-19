@@ -1,42 +1,73 @@
-import SecHeadings from "./SecHeadings";
-import contact from "../assets/contact.png";
-
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="contact py-10 md:py-16 bg-slate-200 bg-opacity-50 scroll-mt-12"
+      aria-labelledby="contact-heading"
+      className="section"
     >
-      <div className="sec-container">
-        <div className="w-full md:w-1/2">
-          <img src={contact} alt="Contact" className="p-10 -scale-75 mix-blend-multiply" />
+      <div className="contact-grid">
+        {/* CTA column */}
+        <div>
+          <div className="availability-badge" role="status" aria-live="polite">
+            Available for projects
+          </div>
+          <h2 id="contact-heading" className="contact-cta-text">
+            Let&apos;s build something <br />
+            great together.
+          </h2>
+          <p className="contact-cta-desc">
+            I&apos;m open to full-time roles, freelance contracts, and
+            long-term collaborations. Whether you have a defined project or
+            just an idea — let&apos;s talk.
+          </p>
+          <div className="hero-actions">
+            <a
+              href="https://api.whatsapp.com/send?phone=8801912070075"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn btn-primary"
+            >
+              Chat on WhatsApp
+            </a>
+            <a
+              href="https://calendly.com/arifkpi/30min"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn btn-secondary"
+            >
+              Book a Call
+            </a>
+          </div>
         </div>
-        <div className="w-full md:w-1/2">
-          <SecHeadings
-            heading="Contact"
-            subheading="Connecting Dreams, Contact Me to Begin!"
-          />
-          <div className="contact-item flex flex-col gap-5 mt-10">
-            <div>
-              <span>Location</span>
-              <h4>Khulna, Bangladesh</h4>
-            </div>
-            <div>
-              <span>Email</span>
-              <h4>arifkpi [at] gmail [dot] com</h4>
-            </div>
-            <div>
-              <span>Portfolio</span>
-              <h4>
-                <a
-                  href="https://www.madebyarif.com"
-                  target="_blank"
-                  className="py-2 border-b border-transparent hover:border-gray-600"
-                >
-                  www.madebyarif.com
-                </a>
-              </h4>
-            </div>
+
+        {/* Contact details */}
+        <div>
+          <div className="contact-item">
+            <p className="contact-item__label">Email</p>
+            <p className="contact-item__value">
+              <a
+                href="#"
+                aria-label="Send email to Arif Khan"
+              >
+                arifkpi [at] gmail [dot] com
+              </a>
+            </p>
+          </div>
+          <div className="contact-item">
+            <p className="contact-item__label">Location</p>
+            <p className="contact-item__value">Khulna, Bangladesh</p>
+          </div>
+          <div className="contact-item">
+            <p className="contact-item__label">Portfolio</p>
+            <p className="contact-item__value">
+              <a
+                href="https://www.arif-khan.net"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                www.arif-khan.net
+              </a>
+            </p>
           </div>
         </div>
       </div>

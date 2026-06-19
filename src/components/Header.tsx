@@ -1,45 +1,52 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
 
 const Header = () => {
-  const [scrollCount, setScrollCount] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
+  // Close menu on outside click
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrollCount(window.scrollY);
-    });
+    const handler = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  // Close on route hash change (link click)
+  useEffect(() => {
+    const handler = () => setIsMenuOpen(false);
+    window.addEventListener("hashchange", handler);
+    return () => window.removeEventListener("hashchange", handler);
   }, []);
 
   return (
-    <header
-      id="header"
-      className={`header w-full z-50 sticky top-0 flex items-center justify-between py-5 md:py-2 ${
-        scrollCount > 100 ? "!bg-white shadow-md" : "bg-opacity-50 bg-slate-50"
-      }`}
-    >
-      <div className="container mx-auto flex flex-col md:flex-row">
-        <h1 className="w-full md:w-1/4 flex items-center justify-center md:justify-start">
-          <a href="/" className="uppercase text-3xl">
-            <span className="font-bold">Arif</span> Khan
-          </a>
-        </h1>
+    <header className="site-header" role="banner" ref={navRef}>
+      <div className="site-header__inner">
+        <a href="/" className="site-logo" aria-label="Arif Khan — Home">
+          Arif Khan <span>/ Dev</span>
+        </a>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-7 w-7 cursor-pointer md:hidden block absolute top-6 right-3"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+        <button
+          className="hamburger"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          aria-controls="site-nav"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
+          {isMenuOpen ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
 
         <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       </div>
@@ -48,3 +55,4 @@ const Header = () => {
 };
 
 export default Header;
+

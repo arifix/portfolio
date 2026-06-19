@@ -1,82 +1,76 @@
-import SocialLinks from "./SocialLinks";
+const socialLinks = [
+  {
+    href: "https://github.com/arifix",
+    label: "GitHub",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  },
+  {
+    href: "https://www.linkedin.com/in/arifkpi/",
+    label: "LinkedIn",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+  },
+  {
+    href: "https://twitter.com/arifkpi",
+    label: "Twitter / X",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
+  },
+  {
+    href: "https://www.facebook.com/arifix/",
+    label: "Facebook",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+  },
+];
+
+const footerNav = [
+  {
+    href: "https://stackoverflow.com/users/8875887/arif-khan",
+    label: "Stack Overflow",
+  },
+  { href: "https://www.hackerrank.com/arifkpi", label: "HackerRank" },
+  { href: "https://cssbattle.dev/player/arifix", label: "CSSBattle" },
+];
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="footer py-10 bg-slate-100 bg-opacity-50">
-      <div className="container m-auto">
-        <nav className="footer-nav flex flex-wrap justify-center">
-          <a
-            href="https://stackoverflow.com/users/8875887/arif-khan"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Stack Overflow
-          </a>
-          <a
-            href="https://www.hackerrank.com/arifkpi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            HackerRank
-          </a>
-          <a
-            href="https://cssbattle.dev/player/arifix"
-            target="_blank"
-            rel="noreferrer"
-          >
-            CSSBattle
-          </a>
+    <footer className="site-footer" role="contentinfo">
+      <div className="site-footer__inner">
+        <nav className="footer-nav" aria-label="Footer navigation">
+          {footerNav.map(({ href, label }) => (
+            <a key={href} href={href} target="_blank" rel="noreferrer noopener">
+              {label}
+            </a>
+          ))}
         </nav>
 
-        <SocialLinks />
-
-        <p className="mt-5 text-base leading-6 text-center text-gray-500">
-          &copy; {new Date().getFullYear()}{" "}
-          <span className="font-medium">Arif Khan</span>. Made with ❤️
-        </p>
-        <div className="flex flex-col justify-center text-center mt-3">
-          <div className="text-gray-500">
-            Image Credit:{" "}
+        <div className="footer-socials" aria-label="Social media links">
+          {socialLinks.map(({ href, label, src }) => (
             <a
-              href="https://www.pexels.com/"
+              key={href}
+              href={href}
               target="_blank"
-              rel="nofollow noreferrer"
-              className="hover:text-gray-900 font-medium"
-              title="Pexels"
+              rel="noreferrer noopener"
+              aria-label={label}
             >
-              Pexels
+              <img
+                src={src}
+                alt={label}
+                width={16}
+                height={16}
+                loading="lazy"
+              />
             </a>
-          </div>
-          <div className="text-gray-500">
-            Last updated on: <span className="font-medium">2025-07-05</span>
-          </div>
+          ))}
         </div>
-        <div className="flex justify-center items-center gap-1 mt-2">
-          <span className="text-gray-500">Tech used:</span>
-          <div className="flex gap-2">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-              alt="ReactJS"
-              width={30}
-              height={30}
-              title="ReactJS"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-              alt="TypeScript"
-              width={30}
-              height={30}
-              title="TypeScript"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-              alt="TailwindCSS"
-              width={30}
-              height={30}
-              title="TailwindCSS"
-            />
-          </div>
-        </div>
+
+        <p className="footer-copy">
+          &copy; {year} <a href="https://www.arif-khan.net">Arif Khan</a>
+          <br />
+          Built with React, TypeScript &amp; TailwindCSS
+          <br />
+          Last updated 2026-06-19
+        </p>
       </div>
     </footer>
   );
