@@ -3,6 +3,8 @@ import SingleWork from "./SingleWork";
 import portfolio from "../utils/arif_khan_portfolio.json";
 
 const ALL = "All";
+const INITIAL_COUNT = 6;
+const LOAD_STEP = 6;
 
 const Works = () => {
   const categories = [
@@ -10,11 +12,20 @@ const Works = () => {
     ...Array.from(new Set(portfolio.projects.map((p) => p.category))),
   ];
   const [active, setActive] = useState(ALL);
+  const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT);
 
   const filtered =
     active === ALL
       ? portfolio.projects
       : portfolio.projects.filter((p) => p.category === active);
+
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
+  const handleCategory = (cat: string) => {
+    setActive(cat);
+    setVisibleCount(INITIAL_COUNT);
+  };
 
   return (
     <section
@@ -37,7 +48,7 @@ const Works = () => {
             role="tab"
             aria-selected={active === cat}
             className={`filter-tab${active === cat ? " active" : ""}`}
-            onClick={() => setActive(cat)}
+            onClick={() => handleCategory(cat)}
           >
             {cat}
           </button>
@@ -45,15 +56,30 @@ const Works = () => {
       </div>
 
       {/* Projects grid */}
-      {filtered.length === 0 ? (
+      {visible.length === 0 ? (
         <p style={{ color: "var(--fg-muted)", fontSize: "0.9375rem" }}>
           No projects to show.
         </p>
       ) : (
         <div className="projects-grid" role="tabpanel">
-          {filtered.map((project) => (
+          {visible.map((project) => (
             <SingleWork key={project.id} {...project} />
           ))}
+        </div>
+      )}
+
+      {/* Load More */}
+      {hasMore && (
+        <div className="load-more-wrap">
+          <p className="load-more-count">
+            Showing {visible.length} of {filtered.length} projects
+          </p>
+          <button
+            className="load-more-btn"
+            onClick={() => setVisibleCount((c) => c + LOAD_STEP)}
+          >
+            Load More
+          </button>
         </div>
       )}
     </section>

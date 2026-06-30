@@ -30,8 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             href="https://api.whatsapp.com/send?phone=8801912070075"
             target="_blank"
             rel="noreferrer noopener"
-            className="btn btn-primary !text-sm ml-2 text-white hover:text-black"
-            style={{ display: "inline-flex" }}
+            className="btn btn-primary !text-sm md:ml-2 text-white hover:text-black"
           >
             Hire Me
           </a>
